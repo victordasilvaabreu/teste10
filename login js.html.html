@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+
+<title>Document</title>
+
+<style type="text/css">
+  
+
+body
+{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+ background-image: url("imagem/v.jpg");
+ background-repeat: no-repeat;
+ background-size: 100% ;
+}
+
+.teste1{
+  display: flex;
+    justify-content: center;
+    color: black; 
+}
+
+.teste2{
+  display: flex;
+    justify-content: center;
+    color: #ffffff00; 
+}
+
+.teste3{
+  position: relative;
+    transform: translateY(50%); 
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 10px;
+  width: 300px;
+ background-color: #ffffff00;
+}
+.teste4{
+  padding: 10px;
+    font-family: Arial;
+    color: white;
+    background-color: blue;
+    border-radius: 15px;
+    width: 100%;
+
+}
+.teste5{
+  justify-content: left;
+}
+
+
+</style>
+
+<script type="text/javascript">
+  function teste()
+  {
+
+var a = document.getElementById("Usuario_input").value;
+var b = document.getElementById("Senha_input").value;
+
+if ( a == "admin" & b == 123)
+{
+  alert("só vitoria!");
+}
+else
+{
+  alert("só derrota");
+}
+
+}
+
+
+</script>
+
+<body>
+
+ <div class="teste2">
+  <div class="teste3">
+   <div class="teste1">
+   <h3>Login</h3>
+   </div>
+
+   <div class="teste1">
+   <form> 
+     <h4>Usuario:</h4>
+     <input type="text" placeholder="Nome" id="Usuario_input">
+   </form>
+   </div>
+
+   <div class="teste1">
+   <form> 
+     <h4>Senha:</h4>
+     <input type="password" placeholder="Senha" id="Senha_input">
+   </form>
+   </div>
+
+
+   <div class="teste2">
+     <div class="teste6">
+  <button class="teste4" onclick="teste()">Entrar</button>
+     </div>
+   </div>
+  </div>
+ </div>
+
+
+
+
+
+
+  
+</body>
+</html>
+

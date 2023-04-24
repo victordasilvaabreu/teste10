@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tabuada com for</title>
+<style type="text/css">
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "arial";
+}
+body{
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: slateblue;
+
+}
+
+
+div.container{
+width: 100%;
+max-width: 450px;
+background-color: white;
+padding: 15px 2%;
+border-radius: 15px;
+justify-content: center;
+flex-wrap: wrap;
+}
+div.container h1{
+font-size: 22px;
+color: rgb(60, 60, 60);
+font-weight: lighter;
+width: 100%;
+text-align: center;
+
+}
+
+div.container input{
+  width: 100%;
+  max-width: 50px;
+  padding: 5px 0;
+  font-size: 16px;
+  text-align: center;
+  outline: 0;
+  border: 1px solid rgb(100, 100, 100);
+  border-radius: 5px;
+}
+div.container input:focus{
+ border: 1px solid slateblue;
+}
+div.container input:: -webkit-inner-spin-button{
+  display: none;
+}
+div.tabuada{
+  width: 100%;
+text-align: center;
+color: rgb(80, 80, 80);
+font-size: 16px;
+line-height: 32px;
+margin:  15px 0;
+
+}
+
+div.container button{
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius:5px ;
+  border: 0;
+  background-color: slateblue;
+  color: white;
+  cursor:pointer ;
+}
+
+  
+
+</style>
+  
+
+</head>
+<body>
+
+<div class="container">
+  <h1>Tabuada do <input type="number"></h1>
+  <div class="tabuada"></div>
+  <button>calcular</button>
+</div>
+
+
+
+<script type="text/javascript">
+  
+  var valor = document.querySelecetor("div.container input")
+  var tabuada = document.querySelecetor("div.container div.tabuada")
+  const calcular = document.querySelecetor("div.container button")
+
+  calcular.addEventListener("click", () => {
+tabuada.innerHTML= ""
+    
+if(Number(valor.value)<1|| Number(valor.value)>12){
+  tabuada.innerHTML = "Insira um valor no intervalo de 1 a 12"
+}else{
+  for(i = 1; i <=12; i++){
+
+var calc = String (i) + "x" + valor.value + "="
++ i * Number(valor.value)
+
+var resultado = document.createElement("p")
+
+resultado.innerText =calc
+
+tabuada.appendChild(resultado)
+}
+}
+})
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

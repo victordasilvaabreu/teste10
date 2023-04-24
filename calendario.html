@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Document</title>
+
+<style type="text/css">
+	    body
+{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+ background-image: url("imagem/v.jpg");
+ background-repeat: no-repeat;
+ background-size: 100% ;
+}
+
+.teste1{
+  display: flex;
+    justify-content: center;
+    color: black; 
+}
+
+.teste2{
+  display: flex;
+    justify-content: center;
+    color: #ffffff00; 
+}
+
+.teste3{
+  position: relative;
+    transform: translateY(50%); 
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 10px;
+  width: 300px;
+ background-color: #ffffff00;
+}
+.teste4{
+  padding: 10px;
+    font-family: Arial;
+    color: white;
+    background-color: blue;
+    border-radius: 15px;
+    width: 100%;
+
+}
+.teste5{
+  justify-content: left;
+}
+
+
+
+        button{
+            background-color: black;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+        }
+
+        button:hover{
+            background-color:blueviolet;
+            cursor: pointer;
+        }
+
+</style>
+
+</head>
+
+<body>
+<div class="body">
+
+   Digite numero de dias na semana que voce faltou:<input id="numero" type="number"> <br /></input>
+   <button onclick="exibir()">Exibir desconto do salario</button>
+  </div>
+
+</body>
+
+<script type="text/javascript">
+	 function exibir(){
+     var faltas = parseInt(document.getElementById("numero").value);
+     
+     switch(faltas){
+      case 1:  
+      	alert("desconta 25 reais");
+      	break;
+      case 2:  
+      	alert("desconta 50 reias");
+break;
+      case 3: 
+       alert("desconta 75 reais");
+break;
+      case 4: 
+       alert("desconta 100 reais");
+break;
+      case 5:
+        alert("desconta 125 reais");
+break;
+      case 6: 
+       alert("desconta 150 reias");
+break;
+      case 7:  alert("desconta 175 reais");
+      	break;
+	}
+     }
+</script>
+
+</html>
